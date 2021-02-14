@@ -7,11 +7,30 @@ Tarun | CycleGAN App
 <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}" />
 {% endblock %}
 
-{% block navbar %}
-<div class="navbar navbar-fixed-top">
-  <!-- ... -->
-</div>
-{% endblock %}
-
 {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-xs-12 col-centered">
+      <h1 class="display-1 title">Van Gogh<span class="italic">ize</span></h1>
+      <p class="lead">Convert your images to Van Gogh style paintings using <span class="highlight">Artificial Intelligence!</span></p>
+      <blockquote class="blockquote">
+        <p class="mb-0">I dream of painting and then I paint my dream.</p>
+        <footer class="blockquote-footer">Vincent Van Gogh</footer>
+      </blockquote>
+    </div>
+  <div>
+  <div class="row">
+    <div class="col-lg-8 col-xs-12 col-centered">
+      <div class="photo_holder">
+          <form>
+            <img id="uploadedImage" src="{{url_for('.static', filename='images/placeholder.png')}}" class="img-responsive" alt="Cinque Terre">
+            <div class="form-group">
+              <input type="file" class="form-control-file" id="imageUpload">
+            </div>
+            <button type="submit">Convert!</button>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>
 {% endblock %}

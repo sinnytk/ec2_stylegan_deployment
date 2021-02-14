@@ -1,3 +1,7 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  color: #292929;
+}
 body {
   background-color: #a5d5d9;
   background-image: url("images/van_gogh.png");
@@ -5,10 +9,60 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 400px;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
 }
 
+.title {
+  font-size: 8rem;
+  text-shadow: 0 0 2px #000;
+  -moz-text-shadow: 0 0 2px #000;
+  -webkit-text-shadow: 0 0 2px #000;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.highlight {
+  color: #aa2e00;
+}
+
+.photo_holder {
+  width: 50vh;
+  height: 50vh;
+}
+.photo_holder form {
+  padding-left: 3vh;
+}
+form button[type="submit"] {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #292929;
+  font-weight: bold;
+  color: rgb(228, 228, 228);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+#uploadedImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
 @media screen and (max-width: 650px) {
   body {
     background-size: 200px;
   }
+  .title {
+    font-size: 5rem;
+  }
+  .blockquote {
+    font-size: 1rem;
+    padding: 3px 3px;
+  }
+}
+#imageUpload {
 }
