@@ -1,3 +1,19 @@
 body {
   background-color: #a5d5d9;
 }
+#van_gogh {
+  float: right;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+  padding: 0px;
+  margin: 0px;
+  width: 500px;
+}
+
+@media screen and (max-width: 650px) {
+  #van_gogh {
+    width: 200px;
+  }
+}
