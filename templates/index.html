@@ -1,4 +1,8 @@
 {% extends "bootstrap/base.html" %}
+{% block head %}
+{{super()}}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+{% endblock %}
 {% block title %}
 Tarun | CycleGAN App
 {%endblock %}
@@ -8,6 +12,7 @@ Tarun | CycleGAN App
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 {% endblock %}
+
 {% block scripts %}
   {{super()}}
   <script src="{{url_for('.static', filename='script.js')}}"></script>
