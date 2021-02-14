@@ -1,0 +1,3 @@
+.prettierignore
+.vscode/
+__pycache__/
