@@ -5,6 +5,12 @@ Tarun | CycleGAN App
 {% block styles %}
 {{super()}}
 <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock %}
+{% block scripts %}
+  {{super()}}
+  <script src="{{url_for('.static', filename='script.js')}}"></script>
 {% endblock %}
 
 {% block content %}
@@ -23,11 +29,13 @@ Tarun | CycleGAN App
     <div class="col-lg-8 col-xs-12 col-centered">
       <div class="photo_holder">
           <form>
-            <img id="uploadedImage" src="{{url_for('.static', filename='images/placeholder.png')}}" class="img-responsive" alt="Cinque Terre">
             <div class="form-group">
-              <input type="file" class="form-control-file" id="imageUpload">
+              <img id="uploadedImage" src="{{url_for('.static', filename='images/placeholder.png')}}" class="img-responsive" alt="Cinque Terre">
+              <label class="btn btn-default uploadBtn">
+                Upload a photo <input id="fileInput" type="file" hidden>
+              </label>
             </div>
-            <button type="submit">Convert!</button>
+            <button id="convertBtn" type="submit" class="btn btn-lg disabled">Convert!</button>
           </form>
       </div>
   </div>

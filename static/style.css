@@ -35,18 +35,6 @@ body {
 .photo_holder form {
   padding-left: 3vh;
 }
-form button[type="submit"] {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #292929;
-  font-weight: bold;
-  color: rgb(228, 228, 228);
-  border: none;
-  outline: none;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: ease 0.3s;
-}
 #uploadedImage {
   width: 200px;
   height: 200px;
@@ -64,5 +52,15 @@ form button[type="submit"] {
     padding: 3px 3px;
   }
 }
-#imageUpload {
+[hidden] {
+  display: none !important;
+}
+.uploadBtn {
+  background-color: #292929;
+  color: #fff;
+  margin-top: 5px;
+}
+.uploadBtn:hover {
+  background-color: #171717;
+  color: rgb(211, 211, 211);
 }
