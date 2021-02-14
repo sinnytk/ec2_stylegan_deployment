@@ -33,14 +33,11 @@ Tarun | CycleGAN App
   <div class="row">
     <div class="col-lg-8 col-xs-12 col-centered">
       <div class="photo_holder">
-          <form>
-            <div class="form-group">
-              <img id="uploadedImage" src="{{url_for('.static', filename='images/placeholder.png')}}" class="img-responsive" alt="Cinque Terre">
-              <label class="btn btn-default uploadBtn">
-                Upload a photo <input id="fileInput" type="file" hidden>
-              </label>
-            </div>
-            <button id="convertBtn" type="button" class="btn btn-lg disabled">Convert!</button>
+          <form id="convert_form">
+              <img id="uploadedImage" src="{{url_for('.static', filename='images/placeholder.png')}}" class="img-responsive" alt="image_viewer">
+              <label for="fileUpload">Upload photo</label>
+              <input type="file" name="inputImage" class="form-control-file" id="fileUpload" accept="image/*"/>
+            <button id="convertBtn" type="submit" class="btn btn-lg disabled">Convert!</button>
           </form>
       </div>
   </div>
