@@ -52,3 +52,7 @@ def convert():
             }
         )
     return jsonify({"image_link": "https://cycleganapp.s3-ap-southeast-1.amazonaws.com/"+filename})
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5001, debug=True)
