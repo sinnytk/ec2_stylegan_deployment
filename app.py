@@ -15,7 +15,8 @@ app = Flask(__name__)
 Bootstrap(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-s3 = boto3.client("s3")
+s3 = boto3.client("s3", aws_access_key_id=os.environ.get("ACCESS_ID"),
+                  aws_secret_access_key=os.environ.get("ACCESS_KEY"))
 
 
 def allowed_file(filename):
